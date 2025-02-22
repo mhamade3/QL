@@ -1,13 +1,15 @@
-# Studio
+<<<<<<< HEAD
+# # QL Studio
 
-Studio is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+QL Studio is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
-## Getting started
+## Getting Started
 
 To get started with this template, first install the npm dependencies:
 
 ```bash
 npm install
+
 ```
 
 Next, run the development server:
@@ -34,3 +36,6 @@ To learn more about the technologies used in this site template, see the followi
 - [Next.js](https://nextjs.org/docs) - the official Next.js documentation
 - [Framer Motion](https://www.framer.com/docs/) - the official Framer Motion documentation
 - [MDX](https://mdxjs.com/) - the official MDX documentation
+=======
+# QL
+>>>>>>> ec6117f48859154def12b3c404c4e00828c881ff
