@@ -1,28 +1,51 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
-export function Button({ invert = false, className, children, ...props }) {
+function ArrowIcon(props) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" {...props}>
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"
+      />
+    </svg>
+  )
+}
+
+const variantStyles = {
+  primary: 'rounded-full bg-neutral-950 py-2.5 px-4 text-white transition-colors duration-300 hover:bg-[#5ebc67]',
+  secondary: 'rounded-full bg-white py-2.5 px-4 text-neutral-950 transition-colors duration-300 hover:bg-[#5ebc67] hover:text-white',
+  filled: 'rounded-full bg-neutral-900 py-2.5 px-4 text-white transition-colors duration-300 hover:bg-[#5ebc67]',
+  outline:
+    'rounded-full py-2.5 px-4 ring-1 ring-neutral-950/10 transition-colors duration-300 hover:bg-[#5ebc67] hover:text-white hover:ring-[#5ebc67]',
+  text: 'text-neutral-950 transition-colors duration-300 hover:text-[#5ebc67]',
+}
+
+export function Button({
+  variant = 'primary',
+  className,
+  children,
+  arrow,
+  ...props
+}) {
+  let Component = props.href ? Link : 'button'
+
   className = clsx(
-    className,
-    'inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition',
-    invert
-      ? 'bg-white text-neutral-950 hover:bg-neutral-200'
-      : 'bg-neutral-950 text-white hover:bg-neutral-800',
+    'inline-flex items-center gap-2.5 justify-center text-sm font-semibold',
+    variantStyles[variant],
+    className
   )
 
-  let inner = <span className="relative top-px">{children}</span>
-
-  if (typeof props.href === 'undefined') {
-    return (
-      <button className={className} {...props}>
-        {inner}
-      </button>
-    )
-  }
+  let arrowIcon = (
+    <ArrowIcon className={clsx('mt-0.5 h-5 w-5', variant === 'text' && 'fill-neutral-950')} />
+  )
 
   return (
-    <Link className={className} {...props}>
-      {inner}
-    </Link>
+    <Component className={className} {...props}>
+      {children}
+      {arrow && arrowIcon}
+    </Component>
   )
 }

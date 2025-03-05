@@ -37,7 +37,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            We've helped brands of all sizes launch and grow
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -64,13 +64,12 @@ function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="Strategic branding for business growth"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          We believe thoughtful brand development is the foundation of business success. 
+          Our approach combines strategic thinking with creative execution.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -121,12 +120,11 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="We help businesses develop and launch impactful brands."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Our strategic approach combines market research, creative design, and consistent implementation to help your brand stand out in today's competitive landscape.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -141,24 +139,17 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="Brand Strategy">
+              We develop comprehensive brand strategies that align with your business goals and resonate with your target audience.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Visual Identity">
+              Our design team creates distinctive logos, color palettes, and visual systems that capture your brand's essence and stand out in the market.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Brand Guidelines">
+              We create detailed guidelines to ensure your brand is implemented consistently across all touchpoints.
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Brand Launch">
+              Our launch strategies help introduce your brand to the market effectively, generating awareness and engagement from day one.
             </ListItem>
           </List>
         </div>
@@ -169,7 +160,7 @@ function Services() {
 
 export const metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Quick Launch is a brand development company helping businesses create impactful brand identities.',
 }
 
 export default async function Home() {
@@ -180,12 +171,10 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            Award-winning development studio based in Denmark.
+            Brand development for fast-growing businesses.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            We are a brand development company specializing in creating impactful identities that help businesses launch quickly and effectively in competitive markets.
           </p>
         </FadeIn>
       </Container>
@@ -198,9 +187,7 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        The team at Quick Launch delivered a brand identity that perfectly captured our vision and helped us stand out in a crowded market.
       </Testimonial>
 
       <Services />
