@@ -132,7 +132,11 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">Our Process</NavigationItem>
+        <NavigationItem href="/services">Services</NavigationItem>
+      </NavigationRow>
+      <NavigationRow>
         <NavigationItem href="/blog">Blog</NavigationItem>
+        {/* You can add another item here if needed */}
       </NavigationRow>
     </nav>
   )
