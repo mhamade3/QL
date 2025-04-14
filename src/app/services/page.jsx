@@ -19,11 +19,10 @@ export default function Services() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            Brand development services that drive results
+            Comprehensive digital solutions for your business
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            We offer strategic brand development services that help businesses build memorable brands
-            and achieve their growth objectives.
+          <p className="mt-6 text-xl font-display text-neutral-600">
+            From website development to brand strategy, we offer end-to-end digital services to help your business thrive in today's competitive market.
           </p>
         </FadeIn>
       </Container>
@@ -41,12 +40,11 @@ function ServiceDescription() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="Brand development services tailored to your business needs"
+        title="Full-spectrum digital services tailored to your needs"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
-        <p>
-          We offer comprehensive brand development services that help businesses establish a strong 
-          market presence and connect with their target audience effectively.
+        <p className="font-display">
+          We offer a complete range of digital services to help businesses establish, grow, and succeed in the digital landscape - from web development to brand strategy and everything in between.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -62,21 +60,23 @@ function ServiceDescription() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2">
-            <ListItem title="Brand Strategy">
-              We develop comprehensive brand strategies that align with your business goals,
-              analyze your market position, and establish your unique value proposition.
+            <ListItem title="Website Development">
+              <span className="font-display text-neutral-600">We create modern, responsive websites that provide excellent user experience and drive business growth.</span>
             </ListItem>
-            <ListItem title="Visual Identity">
-              Our design team creates distinctive logos, color palettes, typography, and visual
-              systems that capture your brand's essence and stand out in the market.
+            <ListItem title="App Development">
+              <span className="font-display text-neutral-600">Custom mobile and desktop applications built with cutting-edge technology to meet your specific business needs.</span>
             </ListItem>
-            <ListItem title="Brand Guidelines">
-              We create detailed guidelines to ensure your brand is implemented consistently
-              across all touchpoints, from marketing materials to product packaging.
+            <ListItem title="Digital Marketing">
+              <span className="font-display text-neutral-600">Strategic digital marketing solutions to increase your online presence and reach your target audience effectively.</span>
             </ListItem>
-            <ListItem title="Brand Activation">
-              Our launch strategies help introduce your brand to the market effectively,
-              generating awareness and engagement from day one.
+            <ListItem title="Graphic Design">
+              <span className="font-display text-neutral-600">Professional graphic design services including logos, marketing materials, and visual content that captures your brand essence.</span>
+            </ListItem>
+            <ListItem title="Product Design">
+              <span className="font-display text-neutral-600">End-to-end product design services from conceptualization to prototyping and final development.</span>
+            </ListItem>
+            <ListItem title="Brand Development">
+              <span className="font-display text-neutral-600">Comprehensive brand development services for startups and existing businesses, including strategy, positioning, and growth planning.</span>
             </ListItem>
           </List>
         </div>
@@ -92,7 +92,7 @@ function ProcessSteps() {
         eyebrow="Our Process"
         title="How we bring your brand to life"
       >
-        <p>
+        <p className="font-display">
           Our proven four-step process ensures we create brands that are strategic, memorable,
           and effective in helping businesses achieve their goals.
         </p>
@@ -126,7 +126,7 @@ function ProcessSteps() {
                 {step.step}
               </div>
               <h3 className="mt-4 font-display text-xl font-semibold text-neutral-950">{step.title}</h3>
-              <p className="mt-2 text-base text-neutral-600">{step.description}</p>
+              <p className="mt-2 text-base font-display text-neutral-600">{step.description}</p>
             </div>
           </FadeIn>
         ))}

@@ -71,9 +71,6 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
-            Contact us
-          </Button>
           <button
             ref={toggleRef}
             type="button"
@@ -241,7 +238,6 @@ function RootLayoutInner({ children }) {
 
       <motion.div
         layout
-        style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         className="relative flex flex-auto overflow-hidden bg-white pt-14"
       >
         <motion.div
@@ -268,8 +264,12 @@ export function RootLayout({ children }) {
   let [logoHovered, setLogoHovered] = useState(false)
 
   return (
-    <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
-    </RootLayoutContext.Provider>
+    <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
+      <body className="flex min-h-full flex-col bg-neutral-950">
+        <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
+          <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+        </RootLayoutContext.Provider>
+      </body>
+    </html>
   )
 }

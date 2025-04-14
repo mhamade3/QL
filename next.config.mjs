@@ -14,6 +14,19 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  webpack: (config, { dev, isServer }) => {
+    // Force polling for Windows development
+    if (dev && process.platform === 'win32') {
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+      }
+    }
+    return config
+  },
+  // Ensure Fast Refresh is enabled
+  reactStrictMode: true,
+  swcMinify: true,
 }
 
 function remarkMDXLayout(source, metaName) {

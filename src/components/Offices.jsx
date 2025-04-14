@@ -24,7 +24,7 @@ export function Offices({ invert = false, ...props }) {
         <Office name="Detroit" invert={invert}>
           123 Main St
           <br />
-          Detroit, Michigan
+          Detroit, MI 48226
         </Office>
       </li>
     </ul>

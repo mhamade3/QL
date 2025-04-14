@@ -8,6 +8,7 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
+import { TypeWriter } from '@/components/TypeWriter'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
@@ -33,27 +34,32 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="mt-16 bg-neutral-950 py-12 sm:mt-24 sm:py-16 lg:mt-32">
       <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+        <FadeIn>
+          <h2 className="text-center font-display text-base font-semibold tracking-wider text-white mb-12">
             We've helped brands of all sizes launch and grow
           </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
-                <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+          <div className="relative w-full overflow-hidden">
+            <div className="flex animate-marquee whitespace-nowrap">
+              {clients.map(([client, logo]) => (
+                <FadeIn key={client}>
+                  <div className="mx-12 w-[150px] inline-block opacity-70 hover:opacity-100 transition-opacity">
+                    <Image src={logo} alt={client} unoptimized />
+                  </div>
                 </FadeIn>
-              </li>
-            ))}
-          </ul>
+              ))}
+              {clients.map(([client, logo]) => (
+                <FadeIn key={`${client}-2`}>
+                  <div className="mx-12 w-[150px] inline-block opacity-70 hover:opacity-100 transition-opacity">
+                    <Image src={logo} alt={client} unoptimized />
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
         </FadeInStagger>
       </Container>
     </div>
@@ -64,12 +70,11 @@ function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Strategic branding for business growth"
+        title="Your Brand, Engineered for Growth"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe thoughtful brand development is the foundation of business success. 
-          Our approach combines strategic thinking with creative execution.
+          Our approach merges sharp strategy with standout visuals to launch brands that compete, connect, and grow.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -120,11 +125,11 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help businesses develop and launch impactful brands."
+        title="Comprehensive digital solutions for modern businesses"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Our strategic approach combines market research, creative design, and consistent implementation to help your brand stand out in today's competitive landscape.
+          From web development to brand strategy, we offer end-to-end digital services to help your business thrive in today's competitive landscape.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -139,17 +144,23 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Brand Strategy">
-              We develop comprehensive brand strategies that align with your business goals and resonate with your target audience.
+            <ListItem title="Website Development">
+              We create modern, responsive websites that provide excellent user experience and drive business growth.
             </ListItem>
-            <ListItem title="Visual Identity">
-              Our design team creates distinctive logos, color palettes, and visual systems that capture your brand's essence and stand out in the market.
+            <ListItem title="App Development">
+              Custom mobile and desktop applications built with cutting-edge technology to meet your specific business needs.
             </ListItem>
-            <ListItem title="Brand Guidelines">
-              We create detailed guidelines to ensure your brand is implemented consistently across all touchpoints.
+            <ListItem title="Digital Marketing">
+              Strategic digital marketing solutions to increase your online presence and reach your target audience effectively.
             </ListItem>
-            <ListItem title="Brand Launch">
-              Our launch strategies help introduce your brand to the market effectively, generating awareness and engagement from day one.
+            <ListItem title="Graphic Design">
+              Professional graphic design services including logos, marketing materials, and visual content that captures your brand essence.
+            </ListItem>
+            <ListItem title="Product Design">
+              End-to-end product design services from conceptualization to prototyping and final development.
+            </ListItem>
+            <ListItem title="Brand Development">
+              Comprehensive brand development services for startups and existing businesses, including strategy, positioning, and growth planning.
             </ListItem>
           </List>
         </div>
@@ -168,13 +179,38 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
+      <Container className="mt-16 sm:mt-24 md:mt-40">
         <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            Brand development for fast-growing businesses.
+          <h1 className="font-display text-5xl font-bold tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
+            We Don't Just Build Brands.
+            <br />
+            We Launch Them.
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            We are a brand development company specializing in creating impactful identities that help businesses launch quickly and effectively in competitive markets.
+          <div className="mt-6 flex items-center text-2xl sm:text-4xl">
+            <span className="font-sans font-bold text-neutral-950">Advancing</span>
+            <span className="ml-2">
+              <TypeWriter 
+                words={[
+                  'Startups',
+                  'Businesses',
+                  'Entrepreneurs',
+                  'Small Teams',
+                  'Enterprises',
+                  'Innovators'
+                ]} 
+              />
+            </span>
+          </div>
+          <div className="mt-8">
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center rounded-none bg-white px-8 py-4 text-base font-medium text-neutral-950 border-2 border-neutral-950 transition hover:bg-[#5ebc67] hover:text-white hover:border-[#5ebc67]"
+            >
+              GET STARTED
+            </Link>
+          </div>
+          <p className="mt-6 text-xl text-neutral-950">
+            Strategic branding. Fast execution. Market-ready identities built to make your endeavors impossible to ignore.
           </p>
         </FadeIn>
       </Container>
