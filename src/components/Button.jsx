@@ -28,6 +28,7 @@ export function Button({
   className,
   children,
   arrow,
+  invert,
   ...props
 }) {
   let Component = props.href ? Link : 'button'
@@ -43,7 +44,7 @@ export function Button({
   )
 
   return (
-    <Component className={className} {...props}>
+    <Component className={className} invert={invert?.toString()} {...props}>
       {children}
       {arrow && arrowIcon}
     </Component>
